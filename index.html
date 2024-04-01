@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number System Conversion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <h1 id="header-h1">Number System Conversion Calculator</h1>
+        <p class="header-p">The user can put any number in any system (decimal, binary, octal and hexadecimal) and convert it to the others.</p>
+        <p class="header-p">It is very simple.</p>
+    </header>
+    <main id="main">
+        <div id="choose-imput-number-system-container">
+            <label for="select-number-system" id="choose-input-number-system-label">Choose the input number system:</label> <br>
+            <select name="selectNumberSystem" id="select-number-system">
+                <option value="optionDecimal" id="optionDecimal">Decimal(base 10)</option>
+                <option value="optionBinary" id="optionBinary">Binary(base 02)</option>
+                <option value="optionOctal" id="optionOctal">Octal(base 8)</option>
+                <option value="optionHexadecimal" id="optionHexadecimal">Hexadecimal(base 16)</option>
+            </select>
+        </div>
+        <div id="enter-number-container">
+            <label for="inputNumber">Enter number:</label>
+            <input name="inputNumber" id="inputNumber">
+        </div>
+        <div id="choose-output-number-system-container">
+            <label for="select-result-number-system" id="choose-output-number-system-label">Choose the result number system:</label> <br>
+            <select name="selectResultNumberSystem" id="select-result-number-system">
+                <option value="optionBinaryResult" id="optionBinaryResult">Binary(base 02)</option>
+                <option value="optionDecimalResult" id="optionDecimalResult">Decimal(base 10)</option>
+                <option value="optionOctalResult" id="optionOctalResult">Octal(base 8)</option>
+                <option value="optionHexadecimalResult" id="optionHexadecimalResult">Hexadecimal(base 16)</option>
+            </select>
+        </div>
+        <div>
+            <button id="buttonCalculate">Calculate</button> <br>
+            <label for="resultNumber">Result number:</label>
+            <input id="resultNumber" readonly> <br>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
