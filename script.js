@@ -57,8 +57,16 @@ buttonCalculate.onclick = function () {
         number = number.toString(16).toUpperCase()
         resultNumber.value = number
 
-    } else if (selectInputNumberOption === "optionHexadecimal" && selectOutputNumberOption === "optionDecimalResult") { //hexadecimal para outros
-        number = parseInt(number, 16)
+    } else if (selectInputNumberOption === "optionHexadecimal" && selectOutputNumberOption === "optionDecimalResult") {     //hexadecimal para outros
+        number = parseInt(inputNumber.value, 16)
+        resultNumber.value = number
+    } else if (selectInputNumberOption === "optionHexadecimal" && selectOutputNumberOption === "optionBinaryResult") {
+        number = parseInt(inputNumber.value, 16)
+        number = number.toString(2)
+        resultNumber.value = number
+    } else if (selectInputNumberOption === "optionHexadecimal" && selectOutputNumberOption === "optionOctalResult") {
+        number = parseInt(inputNumber.value, 16)
+        number = number.toString(8)
         resultNumber.value = number
     }
 }
