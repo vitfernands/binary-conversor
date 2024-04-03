@@ -42,7 +42,7 @@ buttonCalculate.onclick = function () {
         number = number.toString(8)
         resultNumber.value = number
     } else if (selectInputNumberOption === "optionBinary" && selectOutputNumberOption === "optionHexadecimalResult") {
-        number = parseInt(number, 2)
+        number = parseInt(inputNumber.value, 2)
         number = number.toString(16).toUpperCase()
         resultNumber.value = number
 
