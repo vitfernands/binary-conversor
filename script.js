@@ -24,7 +24,7 @@ selectResultNumberSystem.addEventListener("change", function() {    //eventos pa
 })
 
 buttonCalculate.onclick = function () {
-    let number = parseInt(inputNumber.value);
+    let number = parseInt(inputNumber.value);                           //É NECESSARIO TROCAR O NUMBER PELO InputNumber para dar certo a conversao
     let selectInputNumberOption = selectNumberSystem.value;
     let selectOutputNumberOption = selectResultNumberSystem.value;  
 
@@ -38,7 +38,7 @@ buttonCalculate.onclick = function () {
     } else if (selectInputNumberOption === "optionBinary" && selectOutputNumberOption === "optionDecimalResult") {  //binario para outros
         resultNumber.value = parseInt(number, 2);
     } else if (selectInputNumberOption === "optionBinary" && selectOutputNumberOption === "optionOctalResult") {
-        number = parseInt(number, 2)
+        number = parseInt(inputNumber.value, 2)
         number = number.toString(8)
         resultNumber.value = number
     } else if (selectInputNumberOption === "optionBinary" && selectOutputNumberOption === "optionHexadecimalResult") {
