@@ -36,7 +36,7 @@ buttonCalculate.onclick = function () {
         resultNumber.value = number.toString(16).toUpperCase();
 
     } else if (selectInputNumberOption === "optionBinary" && selectOutputNumberOption === "optionDecimalResult") {  //binario para outros
-        resultNumber.value = parseInt(number, 2);
+        resultNumber.value = parseInt(inputNumber.value, 2);
     } else if (selectInputNumberOption === "optionBinary" && selectOutputNumberOption === "optionOctalResult") {
         number = parseInt(inputNumber.value, 2)
         number = number.toString(8)
