@@ -47,13 +47,13 @@ buttonCalculate.onclick = function () {
         resultNumber.value = number
 
     } else if (selectInputNumberOption === "optionOctal" && selectOutputNumberOption === "optionDecimalResult") {   //octal para outros
-        resultNumber.value = parseInt(number, 8)
+        resultNumber.value = parseInt(inputNumber.value, 8)
     } else if (selectInputNumberOption === "optionOctal" && selectOutputNumberOption === "optionBinaryResult") {
-        number = parseInt(number, 8)
+        number = parseInt(inputNumber.value, 8)
         number = number.toString(2)
         resultNumber.value = number
     } else if (selectInputNumberOption === "optionOctal" && selectOutputNumberOption === "optionHexadecimalResult") {
-        number = parseInt(number, 8)
+        number = parseInt(inputNumber.value, 8)
         number = number.toString(16).toUpperCase()
         resultNumber.value = number
 
