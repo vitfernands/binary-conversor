@@ -3,13 +3,22 @@ let selectOutput = document.getElementById("select-output-number-system");
 let inputNumber = document.getElementById("input-number").value;
 let button = document.getElementById("button-calculate");
 let resultNumber = document.getElementById("result-number").value;
+resultNumber = parseInt(resultNumber);
 
-function verifySelectedOption () {
+function verifyInputSelectedOption () {
     const selectedInputOption = selectInput.options[selectInput.selectedIndex].value;
+    return selectedInputOption;
+}
+    
+function verifyOutputSelectedoption() {
     const selectedOutputOption = selectOutput.options[selectOutput.selectedIndex].value;
-    alert("input: " + selectedInputOption + " output: " + selectedOutputOption);
+    return selectedOutputOption;
 }
 
 button.addEventListener("click", () => {
-    verifySelectedOption();
+    inputOption = verifyInputSelectedOption();
+    outputOption = verifyOutputSelectedoption();
 });
+
+
+//
