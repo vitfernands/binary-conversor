@@ -1,9 +1,8 @@
 let selectInput = document.getElementById("select-input-number-system");
 let selectOutput = document.getElementById("select-output-number-system");
-let inputNumber = document.getElementById("input-number").value;
 let button = document.getElementById("button-calculate");
 let resultNumber = document.getElementById("result-number").value;
-resultNumber = parseInt(resultNumber);
+//resultNumber = parseInt(resultNumber);
 
 function verifyInputSelectedOption () {
     const selectedInputOption = selectInput.options[selectInput.selectedIndex].value;
@@ -16,8 +15,13 @@ function verifyOutputSelectedoption() {
 }
 
 button.addEventListener("click", () => {
-    inputOption = verifyInputSelectedOption();
-    outputOption = verifyOutputSelectedoption();
+    let inputNumber = document.getElementById("input-number").value;
+    inputNumber = parseInt(inputNumber); //fazer uma funcao para pegar esses valores
+
+    const inputOption = verifyInputSelectedOption();
+    const outputOption = verifyOutputSelectedoption();
+
+    console.log(inputNumber, typeof inputNumber);
 });
 
 
