@@ -1,6 +1,6 @@
-let selectInput = document.getElementById("select-input-number-system");
-let selectOutput = document.getElementById("select-output-number-system");
-let button = document.getElementById("button-calculate");
+const selectInput = document.getElementById("select-input-number-system");
+const selectOutput = document.getElementById("select-output-number-system");
+const button = document.getElementById("button-calculate");
 let resultNumber = document.getElementById("result-number").value;
 //resultNumber = parseInt(resultNumber);
 
@@ -37,4 +37,4 @@ button.addEventListener("click", () => {
 });
 
 
-//
+
