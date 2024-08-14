@@ -12,7 +12,15 @@ function getInputnumber() {
 
 function verifyInputSelectedOption () {
     const selectedInputOption = selectInput.options[selectInput.selectedIndex].value;
-    return selectedInputOption;
+
+    return selectedInputOption === "option-binary"
+     ? 2 
+     : selectedInputOption === "option-octal"
+     ? 8 
+     : selectedInputOption === "option-hexadecimal"
+     ? 
+     16 :
+     10;
 }
     
 function verifyOutputSelectedoption() {
@@ -30,6 +38,8 @@ button.addEventListener("click", () => {
     const inputOption = verifyInputSelectedOption();
 
     const outputOption = verifyOutputSelectedoption();
+
+    console.log(inputOption, outputOption);
 
     console.log(inputNumber, typeof inputNumber);
 
