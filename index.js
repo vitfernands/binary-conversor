@@ -7,7 +7,8 @@ const resultNumberDisplay = document.getElementById("result-number");
 
 function getInputnumber() {
     let inputNumber = document.getElementById("input-number").value;
-    inputNumber = parseInt(inputNumber);
+    //inputNumber = parseInt(inputNumber);
+    console.log(inputNumber);
     return inputNumber;
 }
 
@@ -36,9 +37,21 @@ function verifyOutputSelectedoption() {
     : 10;
 }
 
-function calculate(inputOption) {
-    if (inputOption == 10) {
-        resultNumberDisplay.textContent = resultNumber;
+function calculate(inputOption, inputNumber, resultNumber, resultNumberDisplay, outputOption) {
+    if (inputOption === 10) {
+        resultNumber = inputNumber.toString(outputOption);
+        resultNumberDisplay.value = resultNumber.toUpperCase();
+    }
+
+    if (inputOption !== 10) {
+        resultNumber = parseInt(inputNumber, inputOption);
+        resultNumber = resultNumber.toString(outputOption).toUpperCase();
+        resultNumberDisplay.value = resultNumber;
+        
+    }
+
+    if (!inputNumber) {
+        resultNumberDisplay.value = " ";
     }
 }
 
@@ -50,11 +63,11 @@ button.addEventListener("click", () => {
 
     const outputOption = verifyOutputSelectedoption();
 
-    console.log(inputOption, outputOption);
+    //console.log(inputOption, outputOption);
 
-    console.log(inputNumber, resultNumber, resultNumberDisplay);
+    //console.log(inputNumber, resultNumber, resultNumberDisplay);
 
-    calculate(inputOption);
+    calculate(inputOption, inputNumber, resultNumber, resultNumberDisplay, outputOption);
 });
 
 

@@ -57,6 +57,7 @@ input {
     border-radius: 5px;
     font-family: "Mukta";
     font-weight: 500;
+    padding: 1px;
 }
 
 button {
