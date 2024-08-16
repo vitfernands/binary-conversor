@@ -7,8 +7,7 @@ const resultNumberDisplay = document.getElementById("result-number");
 
 function getInputnumber() {
     let inputNumber = document.getElementById("input-number").value;
-    //inputNumber = parseInt(inputNumber);
-    console.log(inputNumber);
+    inputNumber = parseInt(inputNumber);
     return inputNumber;
 }
 
@@ -38,6 +37,8 @@ function verifyOutputSelectedoption() {
 }
 
 function calculate(inputOption, inputNumber, resultNumber, resultNumberDisplay, outputOption) {
+    /*
+    
     if (inputOption === 10) {
         resultNumber = inputNumber.toString(outputOption);
         resultNumberDisplay.value = resultNumber.toUpperCase();
@@ -50,9 +51,19 @@ function calculate(inputOption, inputNumber, resultNumber, resultNumberDisplay, 
         
     }
 
+    if (inputOption === 16) {
+        
+    }
+
     if (!inputNumber) {
         resultNumberDisplay.value = " ";
     }
+
+    */
+    resultNumber = parseInt(inputNumber, inputOption);
+    resultNumber = resultNumber.toString(outputOption).toUpperCase();
+    resultNumberDisplay.value = resultNumber;
+
 }
 
 
