@@ -7,7 +7,6 @@ const resultNumberDisplay = document.getElementById("result-number");
 
 function getInputnumber() {
     let inputNumber = document.getElementById("input-number").value;
-    inputNumber = parseInt(inputNumber);
     return inputNumber;
 }
 
@@ -37,33 +36,23 @@ function verifyOutputSelectedoption() {
 }
 
 function calculate(inputOption, inputNumber, resultNumber, resultNumberDisplay, outputOption) {
-    /*
-    
-    if (inputOption === 10) {
-        resultNumber = inputNumber.toString(outputOption);
-        resultNumberDisplay.value = resultNumber.toUpperCase();
-    }
 
-    if (inputOption !== 10) {
+    if (inputOption === 16) {
+        resultNumber = parseInt(inputNumber, 16);
+        resultNumber = resultNumber.toString(outputOption).toUpperCase();
+        resultNumberDisplay.value = resultNumber;
+    } else {
+        inputNumber = parseInt(inputNumber);
         resultNumber = parseInt(inputNumber, inputOption);
         resultNumber = resultNumber.toString(outputOption).toUpperCase();
         resultNumberDisplay.value = resultNumber;
-        
     }
+    
+}
 
-    if (inputOption === 16) {
-        
-    }
-
-    if (!inputNumber) {
-        resultNumberDisplay.value = " ";
-    }
-
-    */
-    resultNumber = parseInt(inputNumber, inputOption);
-    resultNumber = resultNumber.toString(outputOption).toUpperCase();
-    resultNumberDisplay.value = resultNumber;
-
+function focusOnDisplay() {
+    const inputNumberDisplay = document.getElementById("input-number");
+    inputNumberDisplay.focus();
 }
 
 
@@ -74,11 +63,9 @@ button.addEventListener("click", () => {
 
     const outputOption = verifyOutputSelectedoption();
 
-    //console.log(inputOption, outputOption);
-
-    //console.log(inputNumber, resultNumber, resultNumberDisplay);
-
     calculate(inputOption, inputNumber, resultNumber, resultNumberDisplay, outputOption);
+
+    focusOnDisplay();
 });
 
 
