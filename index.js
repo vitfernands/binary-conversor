@@ -37,6 +37,12 @@ function verifyOutputSelectedoption() {
 
 function calculate(inputOption, inputNumber, resultNumber, resultNumberDisplay, outputOption) {
 
+    if (inputOption === outputOption) {
+        resultNumber = "Same number base";
+        resultNumberDisplay.value = resultNumber;
+        return;
+    }
+
     if (inputOption === 16) {
         resultNumber = parseInt(inputNumber, 16);
         resultNumber = resultNumber.toString(outputOption).toUpperCase();
