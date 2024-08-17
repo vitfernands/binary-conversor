@@ -40,14 +40,25 @@ function calculate(inputOption, inputNumber, resultNumber, resultNumberDisplay, 
     if (inputOption === 16) {
         resultNumber = parseInt(inputNumber, 16);
         resultNumber = resultNumber.toString(outputOption).toUpperCase();
+        resultNumber = validNumberCheck(resultNumber);
         resultNumberDisplay.value = resultNumber;
     } else {
         inputNumber = parseInt(inputNumber);
         resultNumber = parseInt(inputNumber, inputOption);
         resultNumber = resultNumber.toString(outputOption).toUpperCase();
+        resultNumber = validNumberCheck(resultNumber);
         resultNumberDisplay.value = resultNumber;
     }
     
+}
+
+function validNumberCheck(resultNumber) {
+    if (isNaN(resultNumber)) {
+        resultNumber = "Invalid Number";
+        return resultNumber;
+    }
+
+    return resultNumber;
 }
 
 function focusOnDisplay() {
@@ -56,7 +67,9 @@ function focusOnDisplay() {
 }
 
 
-button.addEventListener("click", () => {
+button.addEventListener("click", e => {
+    e.preventDefault();
+
     const inputNumber = getInputnumber();
 
     const inputOption = verifyInputSelectedOption();
@@ -67,6 +80,22 @@ button.addEventListener("click", () => {
 
     focusOnDisplay();
 });
+
+document.addEventListener("keypress", e => {
+    if (e.key === 'Enter') {
+        e.preventDefault();
+
+        const inputNumber = getInputnumber();
+
+        const inputOption = verifyInputSelectedOption();
+
+        const outputOption = verifyOutputSelectedoption();
+
+        calculate(inputOption, inputNumber, resultNumber, resultNumberDisplay, outputOption);
+
+        focusOnDisplay();
+    }
+}); 
 
 
 
