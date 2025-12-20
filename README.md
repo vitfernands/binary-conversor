@@ -1,0 +1,1 @@
+Este projeto foi criado em 2024, ano em que entrei na faculdade, pois na primeira matéria de matemática que tive eu estava aprendendo sobre conversão de bases numéricas. Resolvi então criar um simples sistema de JavaScript que converte as bases de números. Como eu estava no começo do meu aprendizado, ficou um código extremamente simples.
